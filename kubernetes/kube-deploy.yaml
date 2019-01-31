@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
       - name: kubeproject-v1
-        image: iad.ocir.io/apaccpt03/kubeproject-app:IMG_TAG
+        image: DOCKER_REGISTRY/TENANCY/circleci-demo-docker:IMG_TAG
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 3000
