@@ -102,7 +102,7 @@ jobs:
                 echo $TAG
                 sed -i -e "s/IMG_TAG/$TAG/g" kubernetes/kube-deploy.yaml
                 cat kubernetes/kube-deploy.yaml
-                kubectl create secret docker-registry regcred --docker-server=iad.ocir.io --docker-username=$DOCKER_USER --docker-password=$DOCKER_PASS  --docker-email=shettyjm@gmail.com || echo 'secret exists'
+                kubectl create secret docker-registry regcred --docker-server=iad.ocir.io --docker-username=$DOCKER_USER --docker-password=$DOCKER_PASS  --docker-email=prasannashasthri@gmail.com || echo 'secret exists'
                 kubectl apply -f kubernetes/kube-deploy.yaml
                 sleep 5
                 kubectl get svc
