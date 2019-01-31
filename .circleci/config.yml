@@ -52,9 +52,9 @@ jobs:
                 export ENDPOINT="containerengine.us-ashburn-1.oraclecloud.com"
                 mkdir -p $HOME/.oci
                 cp ociconfig ~/.oci/config
-                #echo '-----BEGIN RSA PRIVATE KEY-----' > $HOME/.oci/oci_api_key.pem
+                echo '-----BEGIN RSA PRIVATE KEY-----' > $HOME/.oci/oci_api_key.pem
                 echo $OCI_API_KEY >> $HOME/.oci/oci_api_key.pem
-                #echo '-----END RSA PRIVATE KEY-----' >> $HOME/.oci/oci_api_key.pem
+                echo '-----END RSA PRIVATE KEY-----' >> $HOME/.oci/oci_api_key.pem
                 chmod 600 $HOME/.oci/oci_api_key.pem
                 # cat $HOME/.oci/oci_api_key.pem
                 sed -i -e "s/OCI_USER/$OCI_USER/g" ~/.oci/config
